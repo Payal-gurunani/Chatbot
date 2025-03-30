@@ -1,9 +1,10 @@
 import { FaChartLine, FaUpload, FaClipboardList, FaCog } from "react-icons/fa";
-
+import logo from "../assets/logo1.png"
 const Sidebar = ({ setActivePage }) => {
   return (
     <div className="w-64 h-screen bg-gray-900 text-white p-5 fixed">
-      <h2 className="text-xl font-bold mb-6">AI Interview Bot</h2>
+      <img src={logo} alt="Logo" className="w-12 h-12 rounded-full"/>
+      <h2 className="text-xl font-bold mb-6">Interview Bot</h2>
       <ul className="space-y-4">
         <li
           className="flex items-center cursor-pointer hover:bg-gray-700 p-2 rounded"
