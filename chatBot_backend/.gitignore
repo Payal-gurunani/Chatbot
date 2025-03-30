@@ -1,0 +1,39 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Environment Variables
+.env
+
+# Logs & Debug Files
+logs/
+*.log
+debug.log
+error.log
+pm2.log
+pm2-error.log
+
+# Database & Cache
+*.sqlite
+*.sqlite3
+*.db
+*.db-wal
+*.db-shm
+*.sql
+dump.rdb
+*.pid
+
+# IDE & Editor Settings
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*.swo
+
+# System Files
+Thumbs.db
+*.bak
+*.tmp
