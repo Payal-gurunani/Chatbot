@@ -10,8 +10,15 @@ const mockQuestions = [
 
 const MockInterview = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [answer, setAnswer] = useState("");
 
   const nextQuestion = () => {
+    if (answer.trim() === "") {
+      alert("Please enter your answer before proceeding.");
+      return;
+    }
+    
+    setAnswer(""); // Clear input for next question
     if (currentQuestion < mockQuestions.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
     } else {
@@ -27,6 +34,13 @@ const MockInterview = () => {
       <div className="bg-white p-5 shadow-lg rounded-lg">
         <h3 className="text-lg font-semibold mb-4">Question:</h3>
         <p className="text-gray-800 text-xl mb-4">{mockQuestions[currentQuestion]}</p>
+
+        <textarea
+          className="w-full p-2 border rounded mb-4"
+          placeholder="Type your answer here..."
+          value={answer}
+          onChange={(e) => setAnswer(e.target.value)}
+        ></textarea>
 
         <button
           className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700"
